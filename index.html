@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>////////</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Inter, sans-serif;
+        background: linear-gradient(160deg, #0f172a, #1e293b);
+        color: #e2e8f0;
+        padding: 40px 20px;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .fact {
+        padding: 20px 24px;
+        background: rgba(255, 255, 255, 0.05);
+        border-left: 5px solid #fbbf24;
+        border-radius: 12px;
+        font-size: 18px;
+        line-height: 1.5;
+        backdrop-filter: blur(6px);
+        animation: fadeInUp 0.6s ease both;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        animation: fadeInUp 0.6s ease both;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 32px;
+        color: #fbbf24;
+        letter-spacing: 1px;
+      }
+      .header img {
+        width: 120px;
+        opacity: 0.9;
+        margin-bottom: 10px;
+        filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.4));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Sự thật vui vẻ</h1>
+    </div>
+
+    <div class="container" id="factBox"></div>
+
+    <script>
+      const facts = [
+        "Tadatungyeunhauchua.",
+        "Dinh dưỡng của em có thể thiếu rau nhưng chắc chắn không thiếu thịt.",
+        "Những thứ em bỏ ra anh nợ em.",
+        "Anh rời đi thì anh tệ, em rời đi thì do anh tệ.",
+        "Vì không có điều kiện nên anh với em mới không tách ra được. Vậy khi có điều kiện thì sao?",
+        "Em không mua áo quần cho anh thì ba mẹ sẽ cho tiền mua. Ba mẹ hay hỏi có đồ mang không để mua lắm.",
+        "Em cảm thấy em đang bỏ ra nhiều hơn.",
+        "Nhưng nếu bớt anh thì em phải làm nhiều hơn đó. Còn bớt em thì sao.",
+        "Anh sợ anh bỏ em thì không ai yêu em nữa.",
+        "Anh ở với em rồi nếu anh bỏ em thì em sẽ bị thiệt thòi.",
+        "Anh phải ở với em vì anh đã ở với em.",
+        "Anh là con trai mà so đo.",
+        "Anh không làm việc để kiếm tiền.",
+        "Anh thích tìm cách nuôi sống bản thân mà ít mệt nhất.",
+        "Em thích nhiều tiền.",
+        "Em thích thể hiện.",
+        "Em thích được nhiều người yêu thích.",
+        "Anh chưa từng theo đuổi người mình thích.",
+        "Em ghét tất cả người nhà của anh.",
+        "Em ghét cách anh không thể hiện trước người nhà của em.",
+        "Anh thậm chí không thể hiện trước ba mẹ của anh.",
+        "Anh ghét anh là gánh nặng.",
+        "Anh sợ em đói. Em sợ em bị thiệt.",
+        "Anh ở bẩn nên em phải dọn dẹp.",
+        "Em mong muốn anh là người lý trí, tiến thủ, biết suy nghĩ, biết ứng xử, yêu thương, chiều chuộng, kiếm tiền.",
+        "Anh mà là người tốt, lý trí, tiến thủ, giỏi thì em còn không có cơ hội xuất hiện trong đời anh.",
+        "Anh bình thường.",
+        "Không bẩn - không sạch.",
+        "Không giỏi - không ngu.",
+        "Không siêng - không lười.",
+        "Không mạnh - không yếu.",
+        "Không đẹp - không xấu.",
+        "Không yêu - không ghét.",
+        "Em hy sinh quá nhiều.",
+        "Yêu anh tương lai chắc chắn khổ.",
+        "Anh mong em có người để cưới.",
+        "Anh mong em thành công trong công việc của em để kiếm được nhiều tiền.",
+        "Anh không chịu làm gì cả.",
+        "Anh nên rời đi sớm hơn.",
+        "Anh lại kéo chân em lần nữa.",
+        "Anh không yêu với em nữa đâu.",
+      ];
+
+      const box = document.getElementById("factBox");
+      facts.forEach((f, i) => {
+        const div = document.createElement("div");
+        div.className = "fact";
+        div.style.animationDelay = i * 0.5 + "s";
+        div.textContent = f;
+        box.appendChild(div);
+      });
+    </script>
+  </body>
+</html>
